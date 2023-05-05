@@ -366,11 +366,13 @@ header {
             .contactSection {
                 height: 100%;
             }
+
             .Breaker {
                 width: 1px;
                 background-color: #36104b41;
                 height: 30px;
             }
+
             .emailSection {
                 height: 100%;
             }
@@ -535,6 +537,7 @@ header {
 
 .popularAppeal {
     margin-bottom: 70px;
+
     .carouselHeading {
         margin-top: 30px;
         margin-bottom: 50px;
@@ -573,12 +576,13 @@ header {
                 }
             }
         }
-        .slick-arrow{
-            &::before{
+
+        .slick-arrow {
+            &::before {
                 border: 2px solid #36104B;
                 border-radius: 50%;
                 padding: 5px;
-                
+
                 color: #36104B;
                 font-family: none;
             }
@@ -766,89 +770,148 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
 
-            .reviewBox {
-                background-color: white;
-                border: 4px solid #FFCC05;
-                width: 60%;
-                border-radius: 25px;
-                position: relative;
+            .backImage1 {
+                width: 57px;
+                position: absolute;
+                left: 5%;
+                top: 4%;
+            }
 
-                .person {
-                    position: absolute;
-                    top: -37%;
-                    left: 30%;
+            .backImage2 {
+                width: 57px;
+                position: absolute;
+                left: 80%;
+                top: 5%;
+            }
 
-                    .name {
-                        font-family: nunitoBlack;
-                        font-size: 20px;
-                        margin: 0;
-                        color: white;
-                    }
+            .backImage3 {
+                width: 57px;
+                position: absolute;
+                left: 5%;
+                top: 75%;
+            }
 
-                    .about {
-                        color: #FFCC05;
-                        font-family: 'CaveatRegular';
-                    }
+            .backImage4 {
+                width: 57px;
+                position: absolute;
+                left: 82%;
+                top: 76%;
+            }
+
+            .reviewOuter {
+
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .owl-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
 
-                .backImage0 {
-                    width: 84px;
-                    position: absolute;
-                    left: 77%;
-                    top: -27%;
-
+                .owl-dots {
+                    display: none;
                 }
 
-                .backImage1 {
-                    width: 57px;
-                    position: absolute;
-                    left: -24%;
-                    top: -60%;
+                .owl-nav {
+                    display: block;
                 }
 
-                .backImage2 {
-                    width: 57px;
+                .owl-prev,
+                .owl-next {
                     position: absolute;
-                    left: 80%;
-                    top: -60%;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
 
-                .backImage3 {
-                    width: 57px;
-                    position: absolute;
-                    left: -35%;
-                    top: 75%;
+                .owl-prev {
+                    right: 250px;
+                    padding: 3px 14px 7px 14px !important;
+                    border-radius: 50%;
+                    background-color: white;
+                    top: 246px;
                 }
 
-                .backImage4 {
-                    width: 57px;
-                    position: absolute;
-                    left: 102%;
-                    top: 76%;
+                .owl-next {
+                    right: 200px;
+                    padding: 3px 14px 7px 14px !important;
+                    border-radius: 50%;
+                    background-color: white;
+                    top: 246px;
                 }
 
-                .arrows{
-                    position: absolute;
-                    bottom: -8%;
-                    right: 10%;
-                    i{
+                .reviewInner {
+                    width: 60%;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    height: 310px;
+
+                    .reviewBox {
+                        width: 100%;
                         background-color: white;
-                        padding: 10px;
-                        border-radius: 50%;
-                    }
-                    
-                }
-                .mainPic {
-                    width: 89px;
-                    position: absolute;
-                    left: 5%;
-                    top: -29%;
-                }
+                        border: 4px solid #FFCC05;
+                        border-radius: 25px;
+                        position: relative;
 
-                p {
-                    padding: 40px 50px;
-                    color: grey;
+                        .person {
+                            position: absolute;
+                            top: -37%;
+                            left: 30%;
+
+                            .name {
+                                font-family: nunitoBlack;
+                                font-size: 20px;
+                                margin: 0;
+                                color: white;
+                            }
+
+                            .about {
+                                color: #FFCC05;
+                                font-family: 'CaveatRegular';
+                            }
+                        }
+
+                        .backImage0 {
+                            width: 84px;
+                            position: absolute;
+                            left: 77%;
+                            top: -27%;
+
+                        }
+
+
+
+                        .arrows {
+                            display: none;
+                            position: absolute;
+                            bottom: -8%;
+                            right: 10%;
+
+                            i {
+                                background-color: white;
+                                padding: 10px;
+                                border-radius: 50%;
+                            }
+
+                        }
+
+                        .mainPic {
+                            width: 89px;
+                            position: absolute;
+                            left: 5%;
+                            top: -29%;
+                        }
+
+                        p {
+                            padding: 40px 50px;
+                            color: grey;
+                        }
+                    }
                 }
             }
         }
@@ -975,12 +1038,17 @@ header {
 }
 
 @media only screen and (max-width: 1200px) {
+    .reviewInner {
+        height: 400px !important;
+    }
+
     .belowHeader {
-        .inner{
+        .inner {
             gap: 20px !important;
 
         }
     }
+
     .aboutInfo {
         justify-content: flex-start !important;
 
@@ -1026,13 +1094,33 @@ header {
 
     .person {
         position: absolute;
-        top: -26% !important;
+        top: -30% !important;
         left: 38% !important;
 
     }
+ .reviewOuter {
+    .owl-prev {
+        right: 250px !important; 
+        top: 305px !important;
+    }
+
+    .owl-next {
+        right: 200px !important;
+        top: 305px !important;
+    }
+ }
+    
+
 }
 
 @media only screen and (max-width: 991px) {
+    .owl-prev {
+        display: none;
+      }
+  
+      .owl-next {
+          display: none;
+      }
     header {
         margin-top: 0px;
     }
@@ -1102,9 +1190,24 @@ header {
         }
 
     }
+    .owl-prev {
+        display: none;
+      }
+  
+      .owl-next {
+          display: none;
+      }
 }
 
 @media only screen and (max-width: 576px) {
+    .owl-prev {
+      display: none;
+    }
+
+    .owl-next {
+        display: none;
+    }
+
     .carouselTitle2 {
         font-size: 30px !important;
     }
@@ -1154,19 +1257,25 @@ header {
             .secondSection {
                 min-width: 279px;
 
-                .reviewBox {
-                    p {
-                        padding: 10px;
-                        font-size: 12px;
+                .reviewOuter {
+                    .reviewInner {
+
+
+                        .reviewBox {
+                            p {
+                                padding: 10px;
+                                font-size: 12px;
+                            }
+
+                            .mainPic {
+                                width: 70px;
+                                left: 25%;
+                                top: -46%;
+                            }
+
+
+                        }
                     }
-
-                    .mainPic {
-                        width: 70px;
-                        left: 25%;
-                        top: -46%;
-                    }
-
-
                 }
 
 

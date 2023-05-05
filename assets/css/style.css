@@ -660,76 +660,122 @@ header .mainHeader .belowHeaderRow .donateButton p {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.review .reviewSection .secondSection .reviewBox {
+.review .reviewSection .secondSection .backImage1 {
+  width: 57px;
+  position: absolute;
+  left: 5%;
+  top: 4%;
+}
+.review .reviewSection .secondSection .backImage2 {
+  width: 57px;
+  position: absolute;
+  left: 80%;
+  top: 5%;
+}
+.review .reviewSection .secondSection .backImage3 {
+  width: 57px;
+  position: absolute;
+  left: 5%;
+  top: 75%;
+}
+.review .reviewSection .secondSection .backImage4 {
+  width: 57px;
+  position: absolute;
+  left: 82%;
+  top: 76%;
+}
+.review .reviewSection .secondSection .reviewOuter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review .reviewSection .secondSection .reviewOuter .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review .reviewSection .secondSection .reviewOuter .owl-dots {
+  display: none;
+}
+.review .reviewSection .secondSection .reviewOuter .owl-nav {
+  display: block;
+}
+.review .reviewSection .secondSection .reviewOuter .owl-prev,
+.review .reviewSection .secondSection .reviewOuter .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.review .reviewSection .secondSection .reviewOuter .owl-prev {
+  right: 250px;
+  padding: 3px 14px 7px 14px !important;
+  border-radius: 50%;
+  background-color: white;
+  top: 246px;
+}
+.review .reviewSection .secondSection .reviewOuter .owl-next {
+  right: 200px;
+  padding: 3px 14px 7px 14px !important;
+  border-radius: 50%;
+  background-color: white;
+  top: 246px;
+}
+.review .reviewSection .secondSection .reviewOuter .reviewInner {
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 310px;
+}
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox {
+  width: 100%;
   background-color: white;
   border: 4px solid #FFCC05;
-  width: 60%;
   border-radius: 25px;
   position: relative;
 }
-.review .reviewSection .secondSection .reviewBox .person {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .person {
   position: absolute;
   top: -37%;
   left: 30%;
 }
-.review .reviewSection .secondSection .reviewBox .person .name {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .person .name {
   font-family: nunitoBlack;
   font-size: 20px;
   margin: 0;
   color: white;
 }
-.review .reviewSection .secondSection .reviewBox .person .about {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .person .about {
   color: #FFCC05;
   font-family: "CaveatRegular";
 }
-.review .reviewSection .secondSection .reviewBox .backImage0 {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .backImage0 {
   width: 84px;
   position: absolute;
   left: 77%;
   top: -27%;
 }
-.review .reviewSection .secondSection .reviewBox .backImage1 {
-  width: 57px;
-  position: absolute;
-  left: -24%;
-  top: -60%;
-}
-.review .reviewSection .secondSection .reviewBox .backImage2 {
-  width: 57px;
-  position: absolute;
-  left: 80%;
-  top: -60%;
-}
-.review .reviewSection .secondSection .reviewBox .backImage3 {
-  width: 57px;
-  position: absolute;
-  left: -35%;
-  top: 75%;
-}
-.review .reviewSection .secondSection .reviewBox .backImage4 {
-  width: 57px;
-  position: absolute;
-  left: 102%;
-  top: 76%;
-}
-.review .reviewSection .secondSection .reviewBox .arrows {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .arrows {
+  display: none;
   position: absolute;
   bottom: -8%;
   right: 10%;
 }
-.review .reviewSection .secondSection .reviewBox .arrows i {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .arrows i {
   background-color: white;
   padding: 10px;
   border-radius: 50%;
 }
-.review .reviewSection .secondSection .reviewBox .mainPic {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .mainPic {
   width: 89px;
   position: absolute;
   left: 5%;
   top: -29%;
 }
-.review .reviewSection .secondSection .reviewBox p {
+.review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox p {
   padding: 40px 50px;
   color: grey;
 }
@@ -836,6 +882,9 @@ header .mainHeader .belowHeaderRow .donateButton p {
 }
 
 @media only screen and (max-width: 1200px) {
+  .reviewInner {
+    height: 400px !important;
+  }
   .belowHeader .inner {
     gap: 20px !important;
   }
@@ -871,11 +920,25 @@ header .mainHeader .belowHeaderRow .donateButton p {
   }
   .person {
     position: absolute;
-    top: -26% !important;
+    top: -30% !important;
     left: 38% !important;
+  }
+  .reviewOuter .owl-prev {
+    right: 250px !important;
+    top: 305px !important;
+  }
+  .reviewOuter .owl-next {
+    right: 200px !important;
+    top: 305px !important;
   }
 }
 @media only screen and (max-width: 991px) {
+  .owl-prev {
+    display: none;
+  }
+  .owl-next {
+    display: none;
+  }
   header {
     margin-top: 0px;
   }
@@ -925,8 +988,20 @@ header .mainHeader .belowHeaderRow .donateButton p {
     font-size: 12px;
     padding: 10px 20px;
   }
+  .owl-prev {
+    display: none;
+  }
+  .owl-next {
+    display: none;
+  }
 }
 @media only screen and (max-width: 576px) {
+  .owl-prev {
+    display: none;
+  }
+  .owl-next {
+    display: none;
+  }
   .carouselTitle2 {
     font-size: 30px !important;
   }
@@ -960,11 +1035,11 @@ header .mainHeader .belowHeaderRow .donateButton p {
   .review .reviewSection .secondSection {
     min-width: 279px;
   }
-  .review .reviewSection .secondSection .reviewBox p {
+  .review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox p {
     padding: 10px;
     font-size: 12px;
   }
-  .review .reviewSection .secondSection .reviewBox .mainPic {
+  .review .reviewSection .secondSection .reviewOuter .reviewInner .reviewBox .mainPic {
     width: 70px;
     left: 25%;
     top: -46%;
