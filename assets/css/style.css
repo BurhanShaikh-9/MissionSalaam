@@ -329,6 +329,11 @@ header .mainHeader .aboutInfo {
 header .mainHeader .aboutInfo .contactSection {
   height: 100%;
 }
+header .mainHeader .aboutInfo .Breaker {
+  width: 1px;
+  background-color: rgba(54, 16, 75, 0.2549019608);
+  height: 30px;
+}
 header .mainHeader .aboutInfo .emailSection {
   height: 100%;
 }
