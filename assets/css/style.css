@@ -463,6 +463,9 @@ header .mainHeader .belowHeaderRow .donateButton p {
   margin-bottom: 3px;
 }
 
+.popularAppeal {
+  margin-bottom: 70px;
+}
 .popularAppeal .carouselHeading {
   margin-top: 30px;
   margin-bottom: 50px;
@@ -493,6 +496,13 @@ header .mainHeader .belowHeaderRow .donateButton p {
   text-decoration: none;
   padding: 10px 30px;
   border: none;
+}
+.popularAppeal .carousel .slick-arrow::before {
+  border: 2px solid #36104B;
+  border-radius: 50%;
+  padding: 5px;
+  color: #36104B;
+  font-family: none;
 }
 .popularAppeal .card {
   position: relative;
@@ -815,6 +825,7 @@ header .mainHeader .belowHeaderRow .donateButton p {
   align-items: center;
 }
 .footer2 p {
+  font-size: 13px;
   margin-bottom: 0;
   text-align: center;
   color: white;

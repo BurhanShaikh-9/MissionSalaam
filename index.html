@@ -335,10 +335,10 @@
           $(document).ready(function () {
 
             $('.responsive').slick({
-              dots: true,
               infinite: false,
               speed: 300,
-              arrows: false,
+              dots: false,
+              arrows: true,
               slidesToShow: 3,
               slidesToScroll: 1,
               responsive: [
@@ -348,13 +348,15 @@
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    dots: true
+                    dots: false
                   }
                 },
                 {
                   breakpoint: 768,
                   settings: {
                     slidesToShow: 1,
+                    arrows:false,
+                    dots:true,
                     slidesToScroll: 1
                   }
                 },

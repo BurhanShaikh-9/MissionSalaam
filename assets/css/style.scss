@@ -534,6 +534,7 @@ header {
 }
 
 .popularAppeal {
+    margin-bottom: 70px;
     .carouselHeading {
         margin-top: 30px;
         margin-bottom: 50px;
@@ -570,6 +571,16 @@ header {
                         }
                     }
                 }
+            }
+        }
+        .slick-arrow{
+            &::before{
+                border: 2px solid #36104B;
+                border-radius: 50%;
+                padding: 5px;
+                
+                color: #36104B;
+                font-family: none;
             }
         }
     }
@@ -951,6 +962,7 @@ header {
     align-items: center;
 
     p {
+        font-size: 13px;
         margin-bottom: 0;
         text-align: center;
         color: white;
