@@ -1,0 +1,920 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("../css/bootstrap.css");
+@import url("../css/animate.css");
+@import url("../css/jquery.fancybox.min.css");
+@import url("../css/slick.css");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("../css/variables.css");
+@import url("../css/mobile-nav.css");
+#jqcheck {
+  background: #fff9d7;
+  text-align: center;
+  color: #333;
+  padding: 10px 0px;
+  font-size: 13px;
+  font-weight: bold;
+  position: fixed;
+  z-index: 9991;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* text selection color */
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--theme-white);
+  text-shadow: none;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--theme-white);
+  text-shadow: none;
+}
+
+/* browser scroller style */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #ecedf1;
+  -webkit-border-radius: 0px;
+  border-left: 1px solid #888;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-radius: 0px;
+  background: var(--primary-color);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 14px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+p {
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 0 15px;
+  margin: 0px;
+}
+
+/*** theme sections padding ***/
+.sec-padding-100 {
+  padding: 100px 0;
+}
+
+.sec-padding-90 {
+  padding: 90px 0;
+}
+
+.sec-padding-80 {
+  padding: 80px 0;
+}
+
+.sec-padding-70 {
+  padding: 70px 0;
+}
+
+.sec-padding-60 {
+  padding: 60px 0;
+}
+
+.sec-padding-xlarge {
+  padding: 50px 0;
+}
+
+.sec-padding-large {
+  padding: 40px 0;
+}
+
+.sec-padding-medium {
+  padding: 30px 0;
+}
+
+.sec-padding-small {
+  padding: 25px 0;
+}
+
+.sec-padding-xsmall {
+  padding: 10px 0;
+}
+
+/*** theme sections margin ***/
+.sec-margin-100 {
+  margin: 100px 0;
+}
+
+.sec-margin-90 {
+  margin: 90px 0;
+}
+
+.sec-margin-80 {
+  margin: 80px 0;
+}
+
+.sec-margin-70 {
+  margin: 70px 0;
+}
+
+.sec-margin-60 {
+  margin: 60px 0;
+}
+
+.sec-margin-xlarge {
+  margin: 50px 0;
+}
+
+.sec-margin-large {
+  margin: 40px 0;
+}
+
+.sec-margin-medium {
+  margin: 30px 0;
+}
+
+.sec-margin-small {
+  margin: 25px 0;
+}
+
+.sec-margin-xsmall {
+  margin: 10px 0;
+}
+
+/*** no padding, no marging ***/
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+p strong {
+  color: black;
+}
+
+p span {
+  /* color: black; */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  border: 0px;
+  outline: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*img { max-width: 100%;  }*/
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-section {
+  background: #fff;
+}
+
+@font-face {
+  font-family: "nunitoRegular";
+  src: url("/assets/fonts/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NunitoBlack";
+  src: url("/assets/fonts/Nunito-Black.ttf") format("truetype");
+}
+header {
+  margin-top: 20px;
+}
+header .secondHeader {
+  display: none;
+}
+header .secondHeader .logoImage img {
+  width: 90px;
+}
+header .secondHeader .donateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  height: 100%;
+  padding: 15px 30px;
+  background-color: #FFCC05;
+  gap: 10px;
+  text-decoration: none;
+  color: #36104B !important;
+}
+header .secondHeader .donateButton p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 3px;
+}
+header .mainHeader .logoImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .mainHeader .logoImage img {
+  width: 90px;
+}
+header .mainHeader .volunteerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .mainHeader .volunteerImage .volFull {
+  width: 185px;
+}
+header .mainHeader .volunteerImage .volHalf {
+  display: none;
+}
+header .mainHeader .aboutInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+header .mainHeader .aboutInfo .contactSection {
+  height: 100%;
+}
+header .mainHeader .aboutInfo .emailSection {
+  height: 100%;
+}
+header .mainHeader .aboutInfo .callImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header .mainHeader .aboutInfo .contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  font-size: 12px;
+}
+header .mainHeader .aboutInfo .contactInfo p {
+  padding: 0;
+  margin: 0;
+}
+header .mainHeader .aboutInfo .emailImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header .mainHeader .aboutInfo .emailInfo {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+header .mainHeader .aboutInfo .emailInfo p {
+  padding: 0;
+  margin: 0;
+}
+header .mainHeader .socialSection {
+  height: 100%;
+}
+header .mainHeader .socialSection .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header .mainHeader .socialSection .socials a {
+  text-decoration: none;
+  color: #36104B;
+}
+header .mainHeader .socialSection .socials i {
+  background-color: rgba(255, 205, 5, 0.212);
+  padding: 10px 10px;
+  border-radius: 50%;
+}
+header .mainHeader .belowHeaderRow {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+header .mainHeader .belowHeaderRow .belowHeader {
+  background-color: rgba(54, 16, 75, 0.03);
+  border-radius: 18px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  color: #36104B;
+  white-space: nowrap;
+}
+header .mainHeader .belowHeaderRow .belowHeader p {
+  margin: 0;
+}
+header .mainHeader .belowHeaderRow .belowHeader .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .mainHeader .belowHeaderRow .belowHeader .inner p a {
+  text-decoration: none;
+  color: #36104B;
+}
+header .mainHeader .belowHeaderRow .belowHeader .inner2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+header .mainHeader .belowHeaderRow .belowHeader .inner2 p a {
+  text-decoration: none;
+  color: #36104B;
+}
+header .mainHeader .belowHeaderRow .donateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  height: 100%;
+  padding: 15px 30px;
+  background-color: #FFCC05;
+  gap: 10px;
+  text-decoration: none;
+  color: #36104B;
+}
+header .mainHeader .belowHeaderRow .donateButton p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 3px;
+}
+
+.popularAppeal .carouselHeading {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.popularAppeal .carouselHeading .carouselTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popularAppeal .carouselHeading .carouselTitle img {
+  margin-bottom: 20px;
+}
+.popularAppeal .carouselHeading .carouselTitle2 {
+  font-family: NunitoBlack;
+  text-align: center;
+  font-size: 40px;
+}
+.popularAppeal .carousel .responsive .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+.popularAppeal .carousel .responsive .item .card .card-body .donateButton {
+  background-color: #FFCC05;
+  color: #36104B;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+}
+.popularAppeal .card {
+  position: relative;
+}
+.popularAppeal .card .cardDate {
+  background-color: white;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  box-shadow: 0px 11px 13px -5px rgba(0, 0, 0, 0.53);
+}
+.popularAppeal .card .cardDate p {
+  margin: 0;
+  padding: 5px 10px;
+}
+.popularAppeal .card .card-body .bodyHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.popularAppeal .card .card-body .bodyHeader .inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+}
+.popularAppeal .card .card-body .bodyHeader .inner i {
+  color: #FFCC05;
+}
+.popularAppeal .card .card-body .bodyHeader .inner p {
+  margin: 0;
+}
+.popularAppeal .footerLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popularAppeal .footerLinks a {
+  text-decoration: none;
+}
+.popularAppeal .footerLinks .linkInner {
+  color: #FFCC05;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.popularAppeal .footerLinks .linkInner p {
+  margin: 0;
+}
+.popularAppeal .footerLinks .linkInner2 {
+  color: #36104B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.popularAppeal .footerLinks .linkInner2 p {
+  margin: 0;
+}
+
+.newsAndArticles {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.single-item .item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.review {
+  margin-top: 30px;
+  background-image: url(/assets/images/Group21.png);
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+  background-color: #36104B;
+  padding-bottom: 40px;
+}
+.review .reviewBanner {
+  padding: 30px;
+  height: 380px;
+}
+.review .reviewBanner .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review .reviewBanner .title {
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  font-family: "NunitoBlack";
+}
+.review .reviewBanner .donateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review .reviewBanner .donateButton button {
+  border: none;
+  background-color: #36104B;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+}
+.review .reviewSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.review .reviewSection .firstSection {
+  width: 50%;
+  min-width: 500px;
+}
+.review .reviewSection .firstSection .title {
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+  text-align: left;
+  font-family: "NunitoBlack";
+}
+.review .reviewSection .firstSection .description {
+  color: #AEAEAE;
+}
+.review .reviewSection .firstSection button {
+  margin-top: 20px;
+  background-color: #FFCC05;
+  color: #36104B;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+.review .reviewSection .secondSection {
+  width: 50%;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review .reviewSection .secondSection .reviewBox {
+  background-color: white;
+  border: 4px solid #FFCC05;
+  width: 60%;
+  border-radius: 25px;
+  position: relative;
+}
+.review .reviewSection .secondSection .reviewBox .person {
+  position: absolute;
+  top: -29%;
+  left: 34%;
+}
+.review .reviewSection .secondSection .reviewBox .person .name {
+  font-family: nunitoBlack;
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+.review .reviewSection .secondSection .reviewBox .person .about {
+  color: #FFCC05;
+}
+.review .reviewSection .secondSection .reviewBox .backImage1 {
+  width: 57px;
+  position: absolute;
+  left: -24%;
+  top: -60%;
+}
+.review .reviewSection .secondSection .reviewBox .backImage2 {
+  width: 57px;
+  position: absolute;
+  left: 80%;
+  top: -60%;
+}
+.review .reviewSection .secondSection .reviewBox .backImage3 {
+  width: 57px;
+  position: absolute;
+  left: -35%;
+  top: 75%;
+}
+.review .reviewSection .secondSection .reviewBox .backImage4 {
+  width: 57px;
+  position: absolute;
+  left: 102%;
+  top: 76%;
+}
+.review .reviewSection .secondSection .reviewBox .mainPic {
+  width: 89px;
+  position: absolute;
+  left: 5%;
+  top: -29%;
+}
+.review .reviewSection .secondSection .reviewBox p {
+  padding: 40px 50px;
+  color: grey;
+}
+
+.photoGallery {
+  background-color: #FFCC05;
+  text-align: center;
+  font-weight: 800;
+  padding: 18px;
+  font-size: 20px;
+}
+.photoGallery p {
+  margin: 0;
+}
+
+.photoGalleryImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.photoGalleryImages img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 180px;
+}
+
+.footer1 {
+  background-color: #36104B;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(/assets/images/footerBackground.png);
+  background-size: 100% 100%;
+}
+.footer1 .footerInner .footerFirst .logo {
+  margin-bottom: 20px;
+}
+.footer1 .footerInner .footerFirst .about {
+  color: white;
+  margin-bottom: 20px;
+}
+.footer1 .footerInner .footerFirst .donateButton button {
+  background-color: #FFCC05;
+  color: #36104B;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+}
+.footer1 .footerInner .footerLinks {
+  margin-top: 40px;
+  color: white;
+}
+.footer1 .footerInner .footerLinks .Heading {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer1 .footerInner .footerLinks .contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer1 .footerInner .footerLinks .contactInfo i {
+  margin-right: 5px;
+  color: #FFCC05;
+}
+.footer1 .footerInner .footerLinks .contactInfo p {
+  margin-bottom: 3px;
+}
+.footer1 .footerInner .footerLinks .normal {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.footer1 .footerInner .footerLinks .socialSection a {
+  text-decoration: none;
+}
+.footer1 .footerInner .footerLinks .socialSection a i {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+  color: #36104B;
+}
+
+.footer2 {
+  background-color: #36104B;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  align-items: center;
+}
+.footer2 p {
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+.footer2 a {
+  color: #FFCC05;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .aboutInfo {
+    justify-content: flex-start !important;
+  }
+  .aboutInfo .contactInfo {
+    display: none !important;
+  }
+  .aboutInfo .emailInfo {
+    display: none !important;
+  }
+  .review {
+    background-size: 100% 27%;
+  }
+  .review .reviewSection {
+    gap: 132px;
+  }
+  .review .reviewSection .firstSection {
+    text-align: center;
+  }
+  .review .reviewSection .firstSection .title {
+    text-align: center;
+  }
+  .volunteerImage .volFull {
+    display: none;
+  }
+  .volunteerImage .volHalf {
+    display: block !important;
+  }
+  .person {
+    position: absolute;
+    top: -26% !important;
+    left: 38% !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  header {
+    margin-top: 0px;
+  }
+  .mainHeader {
+    display: none;
+  }
+  .secondHeader {
+    display: block !important;
+  }
+  footer {
+    background-color: #36104B;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(/assets/images/footerBackground.png);
+    background-size: 100% 100%;
+  }
+  footer .footerInner {
+    text-align: center;
+  }
+  footer .footerInner .footerLinks .contactInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerInner .footerLinks .contactInfo i {
+    margin-right: 5px;
+    color: #FFCC05;
+  }
+  footer .footerInner .footerLinks .contactInfo p {
+    width: 40%;
+    margin-bottom: 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .review {
+    background-size: 100vw 30%;
+  }
+  .review .title {
+    margin-top: 5px;
+    font-size: 2em !important;
+  }
+  .review .reviewBanner {
+    padding: 10px 20px;
+    height: 300px;
+  }
+  .review .donateButton button {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .carouselTitle2 {
+    font-size: 30px !important;
+  }
+  .review {
+    background-size: 100vw 30%;
+  }
+  .review .title {
+    margin-top: 5px;
+    font-size: 20px !important;
+  }
+  .review .reviewBanner {
+    padding: 10px 20px;
+    height: 265px;
+    flex-direction: column;
+  }
+  .review .reviewBanner .heading img {
+    width: 200px;
+  }
+  .review .donateButton button {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  .review .reviewSection .firstSection {
+    text-align: center;
+    min-width: 279px;
+  }
+  .review .reviewSection .firstSection .title {
+    text-align: center;
+    font-size: 20px;
+  }
+  .review .reviewSection .secondSection {
+    min-width: 279px;
+  }
+  .review .reviewSection .secondSection .reviewBox p {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .review .reviewSection .secondSection .reviewBox .mainPic {
+    width: 70px;
+    left: 25%;
+    top: -46%;
+  }
+  .person {
+    position: absolute;
+    top: -26% !important;
+    left: 38% !important;
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
