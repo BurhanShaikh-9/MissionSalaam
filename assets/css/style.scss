@@ -290,6 +290,11 @@ a {
     src: url('/assets/fonts/Nunito-Black.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'CaveatRegular';
+    src: url('/assets/fonts/Caveat-Regular.ttf') format('truetype');
+}
+
 header {
     margin-top: 20px;
 
@@ -417,30 +422,32 @@ header {
 
         .socialSection {
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
 
-            .socials {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
 
-                a {
-                    text-decoration: none;
-                    color: #36104B;
-                }
 
-                i {
-                    background-color: rgba(255, 205, 5, 0.212);
-                    padding: 10px 10px;
-                    border-radius: 50%;
-
-                }
+            a {
+                text-decoration: none;
+                color: #36104B;
             }
+
+            i {
+                background-color: rgba(255, 205, 5, 0.212);
+                padding: 10px 10px;
+                border-radius: 50%;
+
+            }
+
         }
 
         .belowHeaderRow {
             display: flex;
             height: 100%;
+            padding-right: 24px;
+            padding-left: 18px;
             justify-content: center;
 
             .belowHeader {
@@ -451,7 +458,7 @@ header {
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                padding: 15px 20px;
+                padding: 15px 20px 15px 50px;
                 color: #36104B;
 
                 white-space: nowrap;
@@ -464,9 +471,10 @@ header {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 20px;
-                    p{
-                        a{
+                    gap: 40px;
+
+                    p {
+                        a {
                             text-decoration: none;
                             color: #36104B;
                         }
@@ -479,11 +487,20 @@ header {
                     align-items: center;
                     gap: 30px;
                     height: 100%;
-                    p{
-                        a{
+
+                    p {
+                        font-size: 20px;
+
+                        a {
                             text-decoration: none;
                             color: #36104B;
                         }
+                    }
+
+                    .Breaker {
+                        width: 5px;
+                        background-color: #36104b41;
+                        height: 100%;
                     }
                 }
             }
@@ -572,7 +589,15 @@ header {
             }
         }
 
+        .cardDate {
+            font-family: 'CaveatRegular';
+        }
+
         .card-body {
+            .card-title {
+                font-family: nunitoBlack;
+            }
+
             .bodyHeader {
                 display: flex;
                 justify-content: flex-start;
@@ -696,8 +721,8 @@ header {
         width: 100%;
 
         .firstSection {
-            width: 50%;
-            min-width: 500px;
+            width: 40%;
+            min-width: 400px;
 
             .title {
                 font-size: 40px;
@@ -721,7 +746,7 @@ header {
         }
 
         .secondSection {
-            width: 50%;
+            width: 60%;
             min-width: 500px;
             display: flex;
             justify-content: center;
@@ -734,18 +759,32 @@ header {
                 border-radius: 25px;
                 position: relative;
 
-                .person{
+                .person {
                     position: absolute;
-                    top: -29%;
-                    left: 34%;
-                    .name{
+                    top: -37%;
+                    left: 30%;
+
+                    .name {
                         font-family: nunitoBlack;
                         font-size: 20px;
                         margin: 0;
                         color: white;
                     }
-                    .about{color: #FFCC05;}
+
+                    .about {
+                        color: #FFCC05;
+                        font-family: 'CaveatRegular';
+                    }
                 }
+
+                .backImage0 {
+                    width: 84px;
+                    position: absolute;
+                    left: 77%;
+                    top: -27%;
+
+                }
+
                 .backImage1 {
                     width: 57px;
                     position: absolute;
@@ -774,6 +813,17 @@ header {
                     top: 76%;
                 }
 
+                .arrows{
+                    position: absolute;
+                    bottom: -8%;
+                    right: 10%;
+                    i{
+                        background-color: white;
+                        padding: 10px;
+                        border-radius: 50%;
+                    }
+                    
+                }
                 .mainPic {
                     width: 89px;
                     position: absolute;
@@ -796,7 +846,8 @@ header {
     font-weight: 800;
     padding: 18px;
     font-size: 20px;
-    p{
+
+    p {
         margin: 0;
     }
 }
@@ -820,6 +871,7 @@ header {
     padding-top: 50px;
     padding-bottom: 50px;
     background-image: url(/assets/images/footerBackground.png);
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 
     .footerInner {
@@ -868,39 +920,51 @@ header {
                 margin-bottom: 10px;
                 font-size: 14px;
             }
-            .socialSection{
-                a{
+
+            .socialSection {
+                a {
                     text-decoration: none;
-                    i{
+
+                    i {
                         padding: 10px;
                         border-radius: 50%;
-                    background-color: white;
-                    color: #36104B;
-                }}
-                
+                        background-color: white;
+                        color: #36104B;
+                    }
+                }
+
             }
         }
     }
 }
 
-.footer2{
+.footer2 {
     background-color: #36104B;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 8px;
     align-items: center;
-    p{
+
+    p {
         margin-bottom: 0;
         text-align: center;
         color: white;
     }
-    a{
+
+    a {
         color: #FFCC05;
         text-decoration: none;
     }
 }
+
 @media only screen and (max-width: 1200px) {
+    .belowHeader {
+        .inner{
+            gap: 20px !important;
+
+        }
+    }
     .aboutInfo {
         justify-content: flex-start !important;
 
@@ -913,8 +977,14 @@ header {
         }
     }
 
+    .backImage0 {
+        display: none;
+
+    }
+
     .review {
         background-size: 100% 27%;
+
         .reviewSection {
             gap: 132px;
 
@@ -937,11 +1007,12 @@ header {
             display: block !important;
         }
     }
-    .person{
+
+    .person {
         position: absolute;
         top: -26% !important;
         left: 38% !important;
-        
+
     }
 }
 
@@ -958,12 +1029,13 @@ header {
         display: block !important;
     }
 
-    footer {
+    .footer1 {
         background-color: #36104B;
         padding-top: 50px;
         padding-bottom: 50px;
-        background-image: url(/assets/images/footerBackground.png);
-        background-size: 100% 100%;
+        background-image: none;
+        background-size: 100% 50%;
+
 
         .footerInner {
             text-align: center;
@@ -1078,7 +1150,7 @@ header {
                         top: -46%;
                     }
 
-                    
+
                 }
 
 
@@ -1086,10 +1158,11 @@ header {
         }
 
     }
-    .person{
+
+    .person {
         position: absolute;
         top: -26% !important;
         left: 38% !important;
-        display: none;   
+        display: none;
     }
 }

@@ -268,6 +268,10 @@ a {
   font-family: "NunitoBlack";
   src: url("/assets/fonts/Nunito-Black.ttf") format("truetype");
 }
+@font-face {
+  font-family: "CaveatRegular";
+  src: url("/assets/fonts/Caveat-Regular.ttf") format("truetype");
+}
 header {
   margin-top: 20px;
 }
@@ -370,18 +374,16 @@ header .mainHeader .aboutInfo .emailInfo p {
 }
 header .mainHeader .socialSection {
   height: 100%;
-}
-header .mainHeader .socialSection .socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  gap: 10px;
 }
-header .mainHeader .socialSection .socials a {
+header .mainHeader .socialSection a {
   text-decoration: none;
   color: #36104B;
 }
-header .mainHeader .socialSection .socials i {
+header .mainHeader .socialSection i {
   background-color: rgba(255, 205, 5, 0.212);
   padding: 10px 10px;
   border-radius: 50%;
@@ -389,6 +391,8 @@ header .mainHeader .socialSection .socials i {
 header .mainHeader .belowHeaderRow {
   display: flex;
   height: 100%;
+  padding-right: 24px;
+  padding-left: 18px;
   justify-content: center;
 }
 header .mainHeader .belowHeaderRow .belowHeader {
@@ -398,7 +402,7 @@ header .mainHeader .belowHeaderRow .belowHeader {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 15px 20px;
+  padding: 15px 20px 15px 50px;
   color: #36104B;
   white-space: nowrap;
 }
@@ -409,7 +413,7 @@ header .mainHeader .belowHeaderRow .belowHeader .inner {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 header .mainHeader .belowHeaderRow .belowHeader .inner p a {
   text-decoration: none;
@@ -422,9 +426,17 @@ header .mainHeader .belowHeaderRow .belowHeader .inner2 {
   gap: 30px;
   height: 100%;
 }
+header .mainHeader .belowHeaderRow .belowHeader .inner2 p {
+  font-size: 20px;
+}
 header .mainHeader .belowHeaderRow .belowHeader .inner2 p a {
   text-decoration: none;
   color: #36104B;
+}
+header .mainHeader .belowHeaderRow .belowHeader .inner2 .Breaker {
+  width: 5px;
+  background-color: rgba(54, 16, 75, 0.2549019608);
+  height: 100%;
 }
 header .mainHeader .belowHeaderRow .donateButton {
   display: flex;
@@ -491,6 +503,12 @@ header .mainHeader .belowHeaderRow .donateButton p {
 .popularAppeal .card .cardDate p {
   margin: 0;
   padding: 5px 10px;
+}
+.popularAppeal .card .cardDate {
+  font-family: "CaveatRegular";
+}
+.popularAppeal .card .card-body .card-title {
+  font-family: nunitoBlack;
 }
 .popularAppeal .card .card-body .bodyHeader {
   display: flex;
@@ -597,8 +615,8 @@ header .mainHeader .belowHeaderRow .donateButton p {
   width: 100%;
 }
 .review .reviewSection .firstSection {
-  width: 50%;
-  min-width: 500px;
+  width: 40%;
+  min-width: 400px;
 }
 .review .reviewSection .firstSection .title {
   font-size: 40px;
@@ -622,7 +640,7 @@ header .mainHeader .belowHeaderRow .donateButton p {
   font-weight: 600;
 }
 .review .reviewSection .secondSection {
-  width: 50%;
+  width: 60%;
   min-width: 500px;
   display: flex;
   justify-content: center;
@@ -637,8 +655,8 @@ header .mainHeader .belowHeaderRow .donateButton p {
 }
 .review .reviewSection .secondSection .reviewBox .person {
   position: absolute;
-  top: -29%;
-  left: 34%;
+  top: -37%;
+  left: 30%;
 }
 .review .reviewSection .secondSection .reviewBox .person .name {
   font-family: nunitoBlack;
@@ -648,6 +666,13 @@ header .mainHeader .belowHeaderRow .donateButton p {
 }
 .review .reviewSection .secondSection .reviewBox .person .about {
   color: #FFCC05;
+  font-family: "CaveatRegular";
+}
+.review .reviewSection .secondSection .reviewBox .backImage0 {
+  width: 84px;
+  position: absolute;
+  left: 77%;
+  top: -27%;
 }
 .review .reviewSection .secondSection .reviewBox .backImage1 {
   width: 57px;
@@ -672,6 +697,16 @@ header .mainHeader .belowHeaderRow .donateButton p {
   position: absolute;
   left: 102%;
   top: 76%;
+}
+.review .reviewSection .secondSection .reviewBox .arrows {
+  position: absolute;
+  bottom: -8%;
+  right: 10%;
+}
+.review .reviewSection .secondSection .reviewBox .arrows i {
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
 }
 .review .reviewSection .secondSection .reviewBox .mainPic {
   width: 89px;
@@ -714,6 +749,7 @@ header .mainHeader .belowHeaderRow .donateButton p {
   padding-top: 50px;
   padding-bottom: 50px;
   background-image: url(/assets/images/footerBackground.png);
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .footer1 .footerInner .footerFirst .logo {
@@ -784,6 +820,9 @@ header .mainHeader .belowHeaderRow .donateButton p {
 }
 
 @media only screen and (max-width: 1200px) {
+  .belowHeader .inner {
+    gap: 20px !important;
+  }
   .aboutInfo {
     justify-content: flex-start !important;
   }
@@ -792,6 +831,9 @@ header .mainHeader .belowHeaderRow .donateButton p {
   }
   .aboutInfo .emailInfo {
     display: none !important;
+  }
+  .backImage0 {
+    display: none;
   }
   .review {
     background-size: 100% 27%;
@@ -827,26 +869,26 @@ header .mainHeader .belowHeaderRow .donateButton p {
   .secondHeader {
     display: block !important;
   }
-  footer {
+  .footer1 {
     background-color: #36104B;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url(/assets/images/footerBackground.png);
-    background-size: 100% 100%;
+    background-image: none;
+    background-size: 100% 50%;
   }
-  footer .footerInner {
+  .footer1 .footerInner {
     text-align: center;
   }
-  footer .footerInner .footerLinks .contactInfo {
+  .footer1 .footerInner .footerLinks .contactInfo {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  footer .footerInner .footerLinks .contactInfo i {
+  .footer1 .footerInner .footerLinks .contactInfo i {
     margin-right: 5px;
     color: #FFCC05;
   }
-  footer .footerInner .footerLinks .contactInfo p {
+  .footer1 .footerInner .footerLinks .contactInfo p {
     width: 40%;
     margin-bottom: 3px;
   }
