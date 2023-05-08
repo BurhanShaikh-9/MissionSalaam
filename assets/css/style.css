@@ -261,7 +261,7 @@ a {
 }
 
 @font-face {
-  font-family: "nunitoRegular";
+  font-family: "manropeRegular";
   src: url("/assets/fonts/Manrope-Regular.ttf") format("truetype");
 }
 @font-face {
@@ -524,6 +524,11 @@ header .mainHeader .belowHeaderRow .donateButton p {
 }
 .popularAppeal .card .card-body .card-title {
   font-family: nunitoBlack;
+}
+.popularAppeal .card .card-body .card-text {
+  font-family: "manropeRegular";
+  margin-bottom: 26px;
+  font-size: 14px;
 }
 .popularAppeal .card .card-body .bodyHeader {
   display: flex;
